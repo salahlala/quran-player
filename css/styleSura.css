@@ -76,7 +76,7 @@ body {
 }
 @media (max-width: 767px) {
   .header .container {
-    gap: 15px;
+    gap: 10px;
   }
 }
 .home {
