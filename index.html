@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Quran Player</title>
+  </head>
+  <body>
+    <div class="black-background"></div>
+    <div class="background"></div>
+    <header>
+      <a href="suraText.html" target="_blank" class="quran">المصحف</a>
+      <div class="hadith head">
+        <h1>احاديث</h1>
+        <div class="hadith-select">
+          <p data-name="bukhari">البخاري</p>
+          <p data-name="muslim">مسلم</p>
+          <p data-name="abuDaud">ابو داود</p>
+        </div>
+      </div>
+      <div class="azkar head">
+        <h1>أذكار</h1>
+        <div class="azkar-content">
+          <div class="azkar-title">
+            <p class="morning">اذكار الصباح والمساء</p>
+            <p class="adaia-quran">أدعية قرآنية</p>
+            <p class="tsabihTitle">تسابيح</p>
+          </div>
+        </div>
+      </div>
+      <div class="change-volume head">
+        <div class="icon">
+          <i class="fa-solid fa-volume-high"></i>
+        </div>
+        <div class="volume">
+          <form action="#">
+            <label for="vol">:مستوي صوت الأيه</label>
+            <input type="range" id="vol" />
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="hadith-details"></div>
+    <div class="morning-evening">
+      <div class="btns">
+        <i class="fa-xmark fa-solid cl-azkar"></i>
+
+        <p class="b-morning active" data-az="morning">اذكار الصباح</p>
+        <p class="b-night" data-az="night">اذكار المساء</p>
+      </div>
+
+      <div class="az-content"></div>
+      <div class="night-content"></div>
+    </div>
+    <div class="adaia">
+      <div class="title">
+        <i class="fa-xmark fa-solid cl-adia"></i>
+        <h2>أدعية قرآنية</h2>
+      </div>
+      <div class="adaia-content"></div>
+    </div>
+
+    <div class="tsabih">
+      <div class="title">
+        <i class="fa-xmark fa-solid cl-tsabih"></i>
+        <h2>تسابيح</h2>
+      </div>
+      <div class="tsabih-content"></div>
+    </div>
+    <main tabindex="0">
+      <div class="container">
+        <div class="aya-text"></div>
+        <div class="control">
+          <i class="fa-solid fa-backward-step prev"></i>
+          <i class="fa-solid fa-play play"></i>
+          <i class="fa-solid fa-forward-step next"></i>
+
+          <div class="change-audio"></div>
+        </div>
+        <div class="aya-details">
+          <div class="aya-name"></div>
+        </div>
+
+        <audio autoplay class="currentAudio"></audio>
+
+        <div class="random-img">
+          <img src="imgs/img1.jpg" alt="" />
+          <img src="imgs/img2.jpg" alt="" />
+          <img src="imgs/img3.jpg" alt="" />
+          <img src="imgs/img4.jpg" alt="" />
+          <img src="imgs/img14.jpg" alt="" />
+          <img src="imgs/img6.jpg" alt="" />
+          <img src="imgs/img7.jpg" alt="" />
+          <img src="imgs/img8.jpg" alt="" />
+          <img src="imgs/img9.jpg" alt="" />
+          <img src="imgs/img10.jpg" alt="" />
+          <img src="imgs/img11.jpg" alt="" />
+          <img src="imgs/img12.jpg" alt="" />
+          <img src="imgs/img13.jpg" alt="" />
+          <img src="imgs/img15.jpg" alt="" />
+          <img src="imgs/img17.jpg" alt="" />
+          <img src="imgs/img18.jpg" alt="" />
+          <img src="imgs/img19.jpg" alt="" />
+        </div>
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="hadith-back">
+          <div class="lds-ripple">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="setting">
+      <div class="custom-setting">
+        <div class="select-shikh">
+          <form action="#">
+            <label for="name-shikh"> اختار القارئ </label>
+            <select id="name-shikh">
+              <option value="abdulbasitmurattal">
+                عبد الباسط عبد الصمد المرتل
+              </option>
+              <option value="abdullahbasfar">عبد الله بصفر</option>
+              <option value="abdurrahmaansudais">عبدالرحمن السديس</option>
+              <option value="shaatree">أبو بكر الشاطري</option>
+              <option value="ahmedajamy">أحمد بن علي العجمي</option>
+              <option value="alafasy" selected>مشاري العفاسي</option>
+              <option value="hanirifai">هاني الرفاعي</option>
+              <option value="husary">محمود خليل الحصري</option>
+              <option value="husarymujawwad">محمود خليل الحصري (المجود)</option>
+              <option value="hudhaify">علي بن عبدالرحمن الحذيفي</option>
+              <option value="ibrahimakhbar">إبراهيم الأخضر</option>
+              <option value="mahermuaiqly">ماهر المعيقلي</option>
+              <option value="minshawi">محمد صديق المنشاوي</option>
+              <option value="minshawimujawwad">
+                محمد صديق المنشاوي (المجود)
+              </option>
+              <option value="muhammadayyoub">محمد أيوب</option>
+              <option value="muhammadjibreel">محمد جبريل</option>
+              <option value="saoodshuraym">سعود الشريم</option>
+              <option value="parhizgar">شهریار پرهیزگار</option>
+              <option value="aymanswoaid">أيمن سويد</option>
+            </select>
+          </form>
+        </div>
+        <div class="background-changer">
+          <p>تغيير الخلفيه</p>
+          <i class="fa-solid fa-rotate chn-background"></i>
+        </div>
+      </div>
+
+      <i class="fa-solid fa-gear settingBtn"></i>
+    </div>
+
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
